@@ -13,6 +13,10 @@
     background-color: #F4F4F4;
 }
 
+.bg-color-work-history {
+    background-color: #9B59B6;
+}
+
 .ui-menu-color-home {
     background-color: #E67E22;
 }
@@ -297,4 +301,65 @@ footer {
 
 .personal-info-item .value {
     width: 60%;
+}
+
+/*------------------------------------------------Skills */
+
+.progress {
+    height: 25px;
+    position: relative; /* so we can apply absolute position to the label */
+    margin-bottom: 4px;
+}
+
+.progress-type {
+    position:absolute;
+    left: 0px;
+    padding: 3px 30px 2px 10px;
+    color: #FAFAFA;
+    height: 25px;
+    background-color: rgba(25,25,25,0.2);
+}
+
+.progress-section {
+    margin: 40px 20px;
+}
+
+/*------------------------------------------------Work History */
+.history-heading {
+    color: #FAFAFA;
+}
+
+.timeline-item {
+    padding: 4em 2em 0em 2em; /* big top padding as that is where we will place the before and after pseudo elements */
+    position: relative; /* as there will be absolute children */
+    color: #FAFAFA;
+    border-left: 1px solid;
+}
+
+.timeline-item p {
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item:before {
+    content: attr(data-dates);
+    position: absolute;
+    left: 2.5em;
+    top: 3em; /* above heading */
+    font-family: "Exo", sans-serif;
+    font-weight: 500;
+    font-size: 0.8em; /* as only have 1em of space */
+    margin: 0;
+    padding: 0;
+}
+
+.timeline-item:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 6px; /* half the height or width */
+    position: absolute;
+    left: -6px; /* so right over the left border */
+    top: 2.4em;
+    background-color: #FAFAFA;
 }
